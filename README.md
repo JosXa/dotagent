@@ -231,6 +231,26 @@ Confidential requirements
 | Roo Code | `.roo/rules/*.md`                 | `.roo/rules/*.local.md`                 |
 | Warp.dev | `WARP.md`                         | `WARP.local.md`                         |
 
+### Global Configuration Files
+
+Many AI coding tools also support global (user-level) configuration files in addition to project-local files. These apply across all projects:
+
+| Tool     | Windows                                          | Linux                                | macOS                                              | Notes                                                 |
+| -------- | ------------------------------------------------ | ------------------------------------ | -------------------------------------------------- | ----------------------------------------------------- |
+| Copilot  | `%USERPROFILE%\.copilot\copilot-instructions.md` | `~/.copilot/copilot-instructions.md` | `~/.copilot/copilot-instructions.md`               | Also uses VS Code profile storage                     |
+| Cursor   | Not supported                                    | Not supported                        | Not supported                                      | Feature requested but not yet available               |
+| Cline    | `Documents\Cline\Rules\`                         | `~/Documents/Cline/Rules/`           | `~/Documents/Cline/Rules/`                         | Directory-based, multiple markdown files              |
+| Windsurf | Not documented                                   | Not documented                       | Not documented                                     | Likely `~/.windsurf/` but unconfirmed                 |
+| Zed      | Not applicable                                   | Not applicable                       | Not applicable                                     | Uses JSON config, not markdown                        |
+| Claude   | `%USERPROFILE%\.claude\CLAUDE.md`                | `~/.claude/CLAUDE.md`                | `~/.claude/CLAUDE.md`                              | Also supports `.claude.json`                          |
+| OpenCode | `%APPDATA%\opencode\AGENTS.md`                   | `~/.config/opencode/AGENTS.md`       | `~/Library/Application Support/opencode/AGENTS.md` | Also supports `~/opencode/AGENTS.md` on all platforms |
+| Gemini   | `%USERPROFILE%\.gemini\GEMINI.md`                | `~/.gemini/GEMINI.md`                | `~/.gemini/GEMINI.md`                              | Inferred from settings.json location                  |
+| Junie    | Not supported                                    | Not supported                        | Not supported                                      | Project-level only                                    |
+| Roo Code | `%USERPROFILE%\.roo\rules\`                      | `~/.roo/rules/`                      | `~/.roo/rules/`                                    | Directory-based, multiple markdown files              |
+| Warp.dev | `%USERPROFILE%\.warp\WARP.md`                    | `~/.warp/WARP.md`                    | `~/.warp/WARP.md`                                  | Inferred from common config patterns                  |
+
+**Note:** Tools marked as "Not documented" or "Inferred" may not officially support global markdown config files. Always check the official documentation for the most up-to-date information.
+
 ### CLI Options
 
 ```bash
